@@ -8,16 +8,23 @@ https://pythonspot.com/flask-web-app-with-python/
 https://www.askpython.com/python-modules/flask/flask-forms
 """
 
-#Flask Tutorial
 
+#mostly to just run better on my machine to import diceresults, remove from final push
+import os
+cwd = os.getcwd() + str('\\OtherGithub\\ArmadaDice\\')
+print(cwd)
+
+import sys
+sys.path.append(cwd)
+#%%
+#render_template and jsonify not used ATM
 from flask import Flask,render_template,request
-from flask import jsonify
 import diceresults as dr
 import pandas as pd
 #%%
 app = Flask(__name__)
 
-@app.route("/",methods = ['GET'])
+@app.route("/",methods = ['GET','POST'])
 def main():
     return '''Welcome to Star Wars Armada Dice Calculator
     <br>
@@ -35,7 +42,7 @@ def main():
 #helpful: https://stackoverflow.com/questions/12277933/send-data-from-a-textbox-into-flask
 def action_to_perform_after_submission():
     if request.method == 'GET':
-        return f"get result"
+        return 'get result'
     if request.method == 'POST':
         #results = dr.totals(2,3,2)
         BlueDice = int(request.form['BlueDice'])
