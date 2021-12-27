@@ -37,8 +37,30 @@ def main():
      '''
 
 #%%
-@app.route('/action_to_perform_after_submission',methods = ['GET','POST'])
+def makehtml(BlueDice,RedDice,BlackDice):
+    oneresult = dr.fullresults(BlueDice,RedDice,BlackDice)
 
+    info = "post results: blue:"+str(BlueDice)+" red:"+str(RedDice)+" black:"+str(BlackDice)+"<br>JSON Object:"
+
+    cssstyle = '''<style>
+               #client_logos {
+                display: inline-block;
+                width:100%;
+                }
+              </style>
+    '''
+    header = "<html> "+cssstyle + '''<head>
+     <title>Star Wars Armada Dice Calculator</title>
+    </head>
+<form action="http://armadadice.pythonanywhere.com/">
+    <input type="submit" value="Back to Start" />
+</form>
+    '''
+    finalresult = header+info+'<br>'  + str(dict(oneresult)) +'<br>'+ dr.htmlrender( dict(oneresult)  ) + '\n </html>'
+    return finalresult
+
+#%%
+@app.route('/action_to_perform_after_submission',methods = ['GET','POST'])
 #helpful: https://stackoverflow.com/questions/12277933/send-data-from-a-textbox-into-flask
 def action_to_perform_after_submission():
     if request.method == 'GET':
@@ -48,9 +70,9 @@ def action_to_perform_after_submission():
         BlueDice = int(request.form['BlueDice'])
         RedDice = int(request.form['RedDice'])
         BlackDice = int(request.form['BlackDice'])
-        info = "post results: blue:"+str(BlueDice)+" red:"+str(RedDice)+" black:"+str(BlackDice)+"<br>JSON Object:"
-        fullresults = dr.totals(BlueDice,RedDice,BlackDice)
-        return info+'<br>' + str(dict(fullresults))
+        finalresult = makehtml(BlueDice,RedDice,BlackDice)
+        print(finalresult)
+        return finalresult
 
         #return f"post result: "+str(jsonify(results)) #didn't show results as a string. just put post resutls
 
@@ -59,4 +81,12 @@ def action_to_perform_after_submission():
 if __name__ == "__main__":
     app.debug = False  #False True remove this from final
     app.run(port=8000)
+
+
+
+
+
+#+ s str( dr.htmlrender( dict( dr.fullresults(2,2,5) ) )) )
+#fullresults(3,3,6)
+
 

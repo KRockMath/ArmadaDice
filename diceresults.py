@@ -81,13 +81,13 @@ def fullresults(blues,reds,blacks):
     list2 = [['Blues',blueresults],["Reds",redresults],['Blacks',blackresults]]
     return list2
 #%%  usage examples in Python:
-bydie = dict(fullresults(4,4,6))
+#bydie = dict(fullresults(4,4,6))
 
-print(bydie.keys())
-print(bydie['Blues'])
-print(bydie['Reds'])
-print(bydie['Blacks'])
-print(bydie['Blues'][1])
+#print(bydie.keys())
+#print(bydie['Blues'])
+#print(bydie['Reds'])
+#print(bydie['Blacks'])
+#print(bydie['Blues'][1])
 
 def htmlrender(DiceResults):
     bluelist = DiceResults['Blues']
@@ -98,49 +98,49 @@ def htmlrender(DiceResults):
     for x in bluelist:
         #print(x)
         if x == 'hit':
-            tempstring = '<img src="bluehit.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/bluehit.png">'
         elif x == 'crit':
-            tempstring = '<img src="bluecrit.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/bluecrit.png">'
         elif x == 'accr':
-            tempstring = '<img src="blueaccr.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/blueaccr.png">'
         htmlstring = htmlstring+ str(tempstring) + ' '
     #return htmlstring
 
-    htmlstring = htmlstring+ "<br>"
+    htmlstring = htmlstring+ "\n <br>"
     tempstring = ''
 
     for x in redlist:
         #print(x)
         if x == 'hit':
-            tempstring = '<img src="redhit.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/redhit.png">'
         elif x == 'crit':
-            tempstring = '<img src="redcrit.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/redcrit.png">'
         elif x == 'accr':
-            tempstring = '<img src="redaccr.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/redaccr.png">'
         elif x == '2hits':
-            tempstring = '<img src="red2hits.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/red2hits.png">'
         elif x == 'blnk':
-            tempstring = '<img src="redblank.png">'
+            tempstring = '<img src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/redblank.png">'
         htmlstring = htmlstring+ str(tempstring) + ' '
 
-    htmlstring = htmlstring+ "<br>"
+    htmlstring = htmlstring+ "\n <br>"
     tempstring = ''
 
     for x in blackslist:
         #print(x)
         if x == 'hit':
-            tempstring = '<img src="blackhit.png">'
+            tempstring = '<img style="display: inline; margin: 0 5px;" src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/blackhit.png">'
         elif x == 'hitcrit':
-            tempstring = '<img src="blackhitcrit.png">'
+            tempstring = '<img style="display: inline; margin: 0 5px;" src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/blackhitcrit.png">'
         elif x == 'blnk':
-            tempstring = '<img src="blackblnk.png">'
+            tempstring = '<img style="display: inline; margin: 0 5px;" src="https://www.pythonanywhere.com/user/ArmadaDice/files/home/ArmadaDice/mysite/assets/blackblank.png">'
 
         htmlstring = htmlstring+ str(tempstring) + ' '
 
-    return htmlstring
+    return str(htmlstring)
 
-test = htmlrender(bydie)
-print(test)
+#test = htmlrender(bydie)
+#print(test)
 
 #%%
 def totalresults(blues,reds,blacks):
