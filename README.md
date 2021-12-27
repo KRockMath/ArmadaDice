@@ -2,6 +2,9 @@
 Making a simple dice application in Python for Star Wars Armada using Flask
 
 
+![](/assets/Red2hits.png?display=inline-block)
+![](/assets/redcrit.png?display=inline-block)
+
 <br>
 <img src="/assets/Red2hits.png" style="display: inline-block; margin: 0" >
 <img src="/assets/redcrit.png" style="display: inline-block; margin: 0">
