@@ -1,7 +1,7 @@
 # ArmadaDice
 Making a simple dice application in Python for Star Wars Armada using Flask
 
-<br>
+
 ![](/assets/Red2hits.png?display=inline-block)
 ![](/assets/redcrit.png?display=inline-block)
 ![](/assets/redaccr.png?display=inline-block)
@@ -17,3 +17,4 @@ Making a simple dice application in Python for Star Wars Armada using Flask
 ![](/assets/blackhitcrit.png?display=inline-block)
 ![](/assets/blackhit.png?display=inline-block)
 ![](/assets/blackblank.png?display=inline-block)
+<br>
