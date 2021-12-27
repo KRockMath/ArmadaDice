@@ -183,13 +183,15 @@ def totals(blu,red,blk):
 
     return blargh
 
-results = totals(2,3,2)
+#%%
+#testing
+#results = totals(2,3,2)
 #df = pd.DataFrame(results)
 #print(df)
 
-print(''+str(results)    )
-test = dict(results)
-print(str(test))
+#print(''+str(results)    )
+#test = dict(results)
+#print(str(test))
 
 
 
