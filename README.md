@@ -3,11 +3,11 @@ Making a simple dice application in Python for Star Wars Armada using Flask
 
 
 <br>
-<img src="/assets/Red2hits.png">
-<img src="/assets/redcrit.png">
-<img src="/assets/redaccr.png">
-<img src="/assets/redhit.png">
-<img src="/assets/redblank.png">
+<img src="/assets/Red2hits.png" style="display: inline-block; margin: 0" >
+<img src="/assets/redcrit.png" style="display: inline-block; margin: 0">
+<img src="/assets/redaccr.png" style="display: inline-block; margin: 0">
+<img src="/assets/Redhit.png" style="display: inline-block; margin: 0">
+<img src="/assets/redblank.png" style="display: inline-block; margin: 0">
 
 <br>
 <img src="/assets/bluecrit.png">
