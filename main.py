@@ -6,6 +6,7 @@ Created 2021-12-15
 
 https://pythonspot.com/flask-web-app-with-python/
 https://www.askpython.com/python-modules/flask/flask-forms
+need to host here: https://docs.github.com/en/pages
 """
 
 
